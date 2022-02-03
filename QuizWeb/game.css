@@ -1,0 +1,50 @@
+body {
+    background-size: 125%;
+    background-image: url("media/22.jpg");
+}
+
+img {
+    width: 422px;
+    height: 422px;
+    margin-left: 830px;
+    margin-top: 80px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    text-align: justify;
+    width: 50%;
+    margin-top: -420px;
+    margin-left: 75px;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 8px;
+    padding-bottom: 28px;
+    width: 100%;
+    height: 50px;
+    font-size: 28px;
+    border: 1.6px solid rgb(86, 165, 235, 0.25);
+    background-color: transparent;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 6.4px 22.4px 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-1.6px);
+    transition: transform 150ms;
+}
+
+.choice-prefix {
+    padding: 2px 15px 28px;
+    background-color: cadetblue;
+    color: white;
+}
+
+.choice-text {
+    padding: 2px;
+}
