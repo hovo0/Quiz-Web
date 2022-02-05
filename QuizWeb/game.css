@@ -12,6 +12,9 @@ img {
 
 h2 {
     text-align: center;
+    color: white;
+    font-size: 31px;
+    border-radius: 2px;
 }
 
 .container {
@@ -28,23 +31,31 @@ h2 {
     width: 100%;
     height: 50px;
     font-size: 28px;
-    border: 1.6px solid rgb(86, 165, 235, 0.25);
-    background-color: transparent;
+    border: 1.6px solid rgba(251, 255, 0, 0.25);
+    background-color: rgba(132, 102, 32, 0.9);
 }
 
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 6.4px 22.4px 0 rgba(86, 185, 235, 0.5);
+    box-shadow: 0 6.4px 22.4px 0 rgba(14, 111, 202, 0.5);
     transform: translateY(-1.6px);
     transition: transform 150ms;
 }
 
 .choice-prefix {
     padding: 2px 15px 28px;
-    background-color: cadetblue;
+    background-color: rgba(255, 217, 0, 0.418);
     color: white;
 }
 
 .choice-text {
-    padding: 2px;
+    padding-left: 50px;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
 }
