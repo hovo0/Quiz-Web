@@ -7,15 +7,22 @@ let availableQuestions = [];
 const question = document.getElementById("question")
 const choices = document.getElementsByClassName("choice-text")
 const BackgroundAudio = document.getElementById("myAudio");
+const StartAudio = document.getElementById("myAudioW");
+const CorrectAudio = document.getElementById("myAudioC")
 
-BackgroundAudio.onended = function() {
-    return window.location.assign("/end.html");
+StartAudio.onended = function() {
+    BackgroundAudio.play();
+
 };
-
 document.onclick = function() {
 
+    BackgroundAudio.pause();
+};
+BackgroundAudio.onended = function() {
     BackgroundAudio.play();
-}
+    //return window.location.assign("lose.html");
+};
+
 let questions = [{
         question: "If someone asked to see your ID, what might you show them?",
         choice1: "Your tongue",
@@ -508,7 +515,7 @@ startGame = () => {
 };
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        return window.location.assign("/end.html");
+        return window.location.assign("win.html");
     }
 
     questionCounter++;
@@ -524,26 +531,32 @@ getNewQuestion = () => {
     });
 
     availableQuestions.splice(questionIndex, 1);
-    acceptingAnswers = true;
+
 };
 Array.from(choices).forEach(choice => {
     choice.addEventListener("click", e => {
-        if (!acceptingAnswers)
-            return;
-        acceptingAnswers = false;
+
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-
-
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
         selectedChoice.parentElement.classList.add(classToApply);
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
-            /*if (selectedChoice === 'incorrect') {
-                return window.location.assign("/end.html");
-            }*/
+            debugger;
+            if (classToApply == 'incorrect') {
+                return window.location.assign("lose.html");
+            }
             getNewQuestion();
-        }, 1000);
+            CorrectAudio.play();
+            CorrectAudio.onended = function() {
+                StartAudio.play();
+
+            };
+            StartAudio.onended = function() {
+                BackgroundAudio.play();
+            }
+
+        }, 3000);
 
     });
 });
