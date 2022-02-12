@@ -12,6 +12,7 @@ h2 {
     color: black;
     font-size: 32px;
     border-radius: 2px;
+    margin-bottom: 5px;
 }
 
 .container {
@@ -19,6 +20,7 @@ h2 {
 }
 
 .choice-container {
+    border-radius: 50px;
     display: flex;
     margin-bottom: 8px;
     padding-bottom: 28px;

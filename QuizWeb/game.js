@@ -6,15 +6,15 @@ let availableQuestions = [];
 
 const question = document.getElementById("question")
 const choices = document.getElementsByClassName("choice-text")
-var x = document.getElementById("myAudio");
+const BackgroundAudio = document.getElementById("myAudio");
 
-x.onended = function() {
+BackgroundAudio.onended = function() {
     return window.location.assign("/end.html");
 };
 
 document.onclick = function() {
-    +
-    x.play();
+
+    BackgroundAudio.play();
 }
 let questions = [{
         question: "If someone asked to see your ID, what might you show them?",
