@@ -1,14 +1,14 @@
 body {
     background-size: 100%;
-    background-color: black;
+    background-image: url("4p27kj.jpeg");
 }
 
 div.h1 {
     color: white;
     font-weight: bold;
-    font-size: 71px;
+    font-size: 70px;
     margin-top: 150px;
-    margin-left: 130px;
+    text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

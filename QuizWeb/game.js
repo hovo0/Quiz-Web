@@ -1,12 +1,21 @@
-const question = document.getElementById("question")
-const choices = document.getElementsByClassName("choice-text")
-
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+const question = document.getElementById("question")
+const choices = document.getElementsByClassName("choice-text")
+var x = document.getElementById("myAudio");
+
+x.onended = function() {
+    return window.location.assign("/end.html");
+};
+
+document.onclick = function() {
+    +
+    x.play();
+}
 let questions = [{
         question: "If someone asked to see your ID, what might you show them?",
         choice1: "Your tongue",
