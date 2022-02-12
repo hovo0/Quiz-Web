@@ -7,7 +7,7 @@ img {
     width: 422px;
     height: 422px;
     margin-left: 830px;
-    margin-top: 80px;
+    margin-top: 110px;
 }
 
 h2 {
@@ -15,16 +15,18 @@ h2 {
     color: white;
     font-size: 31px;
     border-radius: 2px;
+    margin-bottom: 5px;
 }
 
 .container {
     text-align: justify;
     width: 50%;
-    margin-top: -420px;
+    margin-top: -480px;
     margin-left: 75px;
 }
 
 .choice-container {
+    border-radius: 50px;
     display: flex;
     margin-bottom: 8px;
     padding-bottom: 28px;
@@ -43,8 +45,10 @@ h2 {
 }
 
 .choice-prefix {
-    padding: 2px 15px 28px;
-    background-color: rgba(255, 217, 0, 0.418);
+    border-radius: 50%;
+    padding: 2px 15px 33px;
+    margin-left: 12px;
+    background-color: rgba(255, 196, 0, 0.582);
     color: white;
 }
 

@@ -1,11 +1,20 @@
 const question = document.getElementById("question")
 const choices = document.getElementsByClassName("choice-text")
+var x = document.getElementById("myAudio");
+x.onended = function() {
+    return window.location.assign("/end.html");
+};
+
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+document.onclick = function() {
+    +
+    x.play();
+}
 
 let questions = [{
         question: "If someone asked to see your ID, what might you show them?",
@@ -488,7 +497,7 @@ let questions = [{
 
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 15;
+const MAX_QUESTIONS = 10;
 
 startGame = () => {
     questionCounter = 0;
@@ -501,6 +510,10 @@ getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         return window.location.assign("/end.html");
     }
+    /*  if (currentQuestion.answer === 'incorrect') {
+          return window.location.assign("/end.html");
+
+      }*/
 
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -530,6 +543,7 @@ Array.from(choices).forEach(choice => {
         selectedChoice.parentElement.classList.add(classToApply);
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
+
             /*if (selectedChoice === 'incorrect') {
                 return window.location.assign("/end.html");
             }*/
