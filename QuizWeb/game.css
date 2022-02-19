@@ -1,6 +1,8 @@
         body {
             background-size: 100%;
             background-image: url("media/22.jpg");
+            height: 100vh;
+            margin: 0;
         }
         
         img {
