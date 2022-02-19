@@ -1,74 +1,71 @@
-body {
-    background-size: 100%;
-    background-image: url("media/22.jpg");
-}
-
-img {
-    width: 73%;
-}
-
-h2 {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 32px;
-    border-radius: 2px;
-    margin-bottom: 5px;
-}
-
-.container {
-    width: 100%;
-}
-
-.choice-container {
-    border-radius: 25px;
-    display: flex;
-    margin-bottom: 8px;
-    padding-bottom: 28px;
-    width: 100%;
-    height: 50px;
-    font-size: 28px;
-    border: 1.6px solid rgba(255, 213, 74, 0.75);
-    background-color: rgba(255, 225, 126, 0.75);
-}
-
-.choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 6.4px 22.4px 0 rgba(14, 111, 202, 0.5);
-    transform: translateY(-1.6px);
-    transition: transform 150ms;
-}
-
-.choice-prefix {
-    padding: 0px 12px 35px;
-    background-color: rgb(255, 219, 60, 0.75);
-    color: rgb(255, 255, 255);
-}
-
-.choice-text {
-    padding-left: 50px;
-}
-
-.correct {
-    background-color: green;
-}
-
-.incorrect {
-    background-color: red;
-}
-
-.main-game {
-    display: flex;
-    padding: 4% 5% 0% 5%;
-}
-
-.main-image {
-    display: flex;
-    justify-content: center;
-    /* align-items: end; */
-}
-
-.question-banner {
-    background: rgba(255, 219, 60, 0.75);
-    border: 2px solid rgb(73, 73, 73);
-    border-radius: 20px;
-}
+        body {
+            background-size: 100%;
+            background-image: url("media/22.jpg");
+        }
+        
+        img {
+            width: 73%;
+        }
+        
+        h2 {
+            font-family: 'Noto Serif Display', serif;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 2px;
+            margin-bottom: 5px;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        .choice-container {
+            border-radius: 25px;
+            display: flex;
+            margin-bottom: 8px;
+            padding-bottom: 28px;
+            width: 100%;
+            height: 50px;
+            font-size: 28px;
+            font-family: 'Noto Serif Display', serif;
+            color: rgb(252, 252, 252);
+            border: 1.6px solid rgb(255, 255, 255);
+            background: transparent;
+        }
+        
+        .choice-container:hover {
+            cursor: pointer;
+            box-shadow: 0 6.4px 22.4px 0 rgba(255, 255, 255, 0.5);
+            transform: translateY(-1.6px);
+            transition: transform 150ms;
+        }
+        
+        .choice-prefix {
+            padding: 0px 12px 35px;
+            background-color: rgb(255, 219, 60, 0.75);
+            color: rgb(255, 255, 255);
+        }
+        
+        .choice-text {
+            padding-left: 50px;
+        }
+        
+        .correct {
+            background-color: green;
+        }
+        
+        .incorrect {
+            background-color: red;
+        }
+        
+        .main-game {
+            display: flex;
+            padding: 4% 5% 0% 5%;
+        }
+        
+        .main-image {
+            display: flex;
+            justify-content: center;
+        }

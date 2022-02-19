@@ -1,6 +1,5 @@
 let currentQuestion = {};
 let acceptingAnswers = false;
-let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
@@ -20,7 +19,7 @@ document.onclick = function() {
 };
 BackgroundAudio.onended = function() {
     BackgroundAudio.play();
-    //return window.location.assign("lose.html");
+
 };
 
 let questions = [{
@@ -503,12 +502,10 @@ let questions = [{
 ]
 
 
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 15;
+const MAX_QUESTIONS = 10;
 
 startGame = () => {
     questionCounter = 0;
-    score = 0;
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNewQuestion();
@@ -542,7 +539,7 @@ Array.from(choices).forEach(choice => {
         selectedChoice.parentElement.classList.add(classToApply);
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
-            debugger;
+
             if (classToApply == 'incorrect') {
                 return window.location.assign("lose.html");
             }
@@ -556,7 +553,7 @@ Array.from(choices).forEach(choice => {
                 BackgroundAudio.play();
             }
 
-        }, 3000);
+        }, 1000);
 
     });
 });

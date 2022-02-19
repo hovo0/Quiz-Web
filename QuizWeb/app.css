@@ -23,9 +23,6 @@ div.p1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-/* General Button Style */
-
 .button {
     position: relative;
     display: block;
@@ -63,9 +60,6 @@ div.p1 {
     transform: perspective(15px) rotateX(-3deg);
 }
 
-
-/* Button Border Style */
-
 .button.border:before,
 .button.border:after {
     border: 4px solid #ffee00;
@@ -73,16 +67,11 @@ div.p1 {
 
 .button.border:before {
     border-bottom: none;
-    /* to prevent the border-line showing up in the middle of the shape */
 }
 
 .button.border:after {
     border-top: none;
-    /* to prevent the border-line showing up in the middle of the shape */
 }
-
-
-/* Button hover styles */
 
 .button.border:hover:before,
 .button.border:hover:after {
